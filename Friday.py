@@ -65,6 +65,8 @@ if __name__ == '__main__':
 
 
         # Logic for executing tasks based on query
+
+
         if 'what is your name' in query:
             speak('I am Friday,Sir')
 
@@ -107,8 +109,12 @@ if __name__ == '__main__':
 
         elif 'what are you doing' in query:
             speak("Sir I am talking with you, and also learning from you")
+
         elif 'what do you eat' in  query:
             speak("I eat electricity")
+
+        elif 'thank you' and 'nice' in query:
+            speak("Its my honour to help you ,Sir")
         elif 'what is your name' and "what's your name" in query:
             speak("Friday Sir")
         elif 'hello' and 'hi' in query:
@@ -119,6 +125,6 @@ if __name__ == '__main__':
             for url in search(query, stop=1):
                 webbrowser.open(url)
                 print(url)
-                speak("opening"+'')
+                speak("opening"+query)
             print("this line")
 
